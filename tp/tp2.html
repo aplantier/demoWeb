@@ -1,0 +1,238 @@
+<!-- 
+	PLANTIER Antoine 
+	DEV WEB 
+	TP1
+-->
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<title>TP2 : Premiers pas en CSS</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/page.css">		
+</head>
+<body>
+	<header>
+		<h1>TP2 : Premiers pas en CSS</h1>
+	</header>
+	<main>
+
+		<div class="reponse">
+			<h2>Quelques questions sur la couleur</h2>
+			
+			<h3> À quoi correspond rgb(120, 56, 13) en hexadécimal ?</h3>
+			<p>
+				Le format RGB est un format de codage de couleur basé sur la propriété physique de l'additivité des couleurs primaires. En composant le rouge (<b>R</b>ed), le vert (<b>G</b>reen) et le bleu (<b>B</b>lue) on peut reproduire le spectre complet de la lumière, et donc (presque) toutes les couleurs, ici rgb(120, 56, 13) donne du maron.
+			</p>
+			<ul>
+				<li>(160)_8 = (78)_16 </li>
+				<li>(56)_8 = (38)_16 </li>
+				<li>(13)_8 = (0D)_16 </li>
+			</ul>
+			<p>en hexadecimal on change en base 16 les digits octaux du code RGB (78380D)_16 </p>
+			
+			<h3>Combien de couleurs chacune de ces trois méthodes (rgb, hexa ou nom de couleur)	vous permettent d'obtenir ?</h3>
+			<p>
+				Etant donné que les couleurs sont encodées numériquement, il existe un nombre finis de couleurs possibles dans chaques encodage.
+			</p>
+			<ul>
+				<li><b>RGB</b> encodé avec un triplet d'octets en base 10 {255,255,255} ainsi 256^3=16 777 216. A noter que la méthode Rgb propose également un canal pour gérer la transparence</li>
+				<li><b>HEXADECIMAL</b> meme fonctionnement que RGB avec les octets codés en Hexadecimal. Même nombre de couleurs encodable</li>
+				<li><b> <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s" title=" systeme x11" target="_blank">Noms de couleurs système X11</a> </b> limité(148 couleurs nommées)et peu commode. En revanche, les couleurs peuvent être assez ternees à l'impression</li>
+			</ul>
+			<h3>Comparaison des méthodes d'encodage de couleurs</h3>
+			<p>
+				Les système RGB/HEX sont assez semblable à l'usage mais en pratique ils ont tout les deux des avantages(et des inconvénients ).
+			</p>
+			<ul>
+				<li><b>RGB</b> est plus intuitif pour peu qu'on soit à l'aise avec la colorimétrie et sans avoir la contrainte de convertir de base 10 a 16. On quantifie les couleurs proportionellement entre 0 et 255 sur les différents spectre.</li>
+				<li><b>HEX</b> présente une simplicité d'encodage et de manipulation de donnée informatiquement du fait de son format Hexadecimal plus généralement utilisé en 	informatique.</li>
+				<li><b> le systeme X11</b> est plus simple pour le néophite qui peut choisir les couleurs frace à un étalon et les référencer en utilisant un nom plutot qu'un code. De plus ce sont des couleurs normalisées utilises dans les système informatique utilisant le moteur graphique X11. Ces couleurs se distinguent par leurs qualité.</li>
+			</ul>
+		</div>
+
+		<div class=reponse>
+			<h2>La Notion d'héritage</h2>
+
+			<p> Questions sur l'arbre DOM</p>
+			<img id="imgDOM" src="../src/dom.svg" alt="image Exercice DOM" title="Exemple d'arbre DOM" style="background: lightgrey;width:auto;height:400px; margin-top: 2em;">
+
+			
+			<h3>Combien cet arbre a t-il de noeuds ?</h3>
+			<p>
+				Au tôtal, l'arbre est constitué de <b>29 noeuds</b>
+			</p>
+			<ul>
+				<li> <b>12 noeuds de type</b> texte (les feuilles ) </li>
+				<li> <b>17 noeuds</b> de type éléments</li>
+			</ul>
+			
+
+			<h3>Le Code HTML correspondant :</h3>
+
+			<code>
+				<!--						<body>
+							
+							<header>
+							<h1>Les papous </h1>
+							</header>
+							<main>
+								<section>
+									<h2>Définition</h2>
+									<p> 
+										les 
+										<em>papous</em>
+									sont des habitants de papouasie
+									</p>
+								</section>
+								<section>
+									<h2>Classification</h2>
+									<ul>
+										<li>Les papous Papa</li>
+										<li>Les papous pas Papa</li>
+									</ul>
+								</section>
+							</main>
+							<footer>
+								Site réalisée par
+								<i>C. Lewi-Strauss</i>
+								en ppartenariat avec 
+								<i>A.Franquin</i>
+								.
+							</footer>
+						</body>
+					-->
+					&nbsp;<br />
+					&#x3C;body&#x3E;<br />
+					&nbsp;&#x3C;header&#x3E;<br />
+					&nbsp;&#x3C;h1&#x3E;Les papous &#x3C;/h1&#x3E;<br />
+					&nbsp;&#x3C;/header&#x3E;<br />
+					&nbsp;&#x3C;main&#x3E;<br />
+					&nbsp;&nbsp;&#x3C;section&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;p&#x3E; <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;les <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;em&#x3E;papous&#x3C;/em&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;sont des habitants de papouasie<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;/p&#x3E;<br />
+					&nbsp;&nbsp;&#x3C;/section&#x3E;<br />
+					&nbsp;&nbsp;&#x3C;section&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;ul&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;li&#x3E;Les papous Papa&#x3C;/li&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;li&#x3E;Les papous pas Papa&#x3C;/li&#x3E;<br />
+					&nbsp;&nbsp;&nbsp;&#x3C;/ul<br />
+					&nbsp;&nbsp;&#x3C;/section&#x3E;<br />
+					&nbsp;&#x3C;/main&#x3E;<br />
+					&nbsp;&#x3C;footer&#x3E;<br />
+					&nbsp;&nbsp;Site r&#xE9;alis&#xE9;e par<br />
+					&nbsp;&nbsp;&#x3C;i&#x3E;C. Lewi-Strauss&#x3C;/i&#x3E;<br />
+					&nbsp;&nbsp;en ppartenariat avec <br />
+					&nbsp;&nbsp;&#x3C;i&#x3E;A.Franquin&#x3C;/i&#x3E;<br />
+					&nbsp;&nbsp;.<br />
+					&nbsp;&#x3C;/footer&#x3E;<br />
+					&#x3C;/body&#x3E;<br />
+					<br />
+				</code><!-- DOM Conecté -->	
+			</div>
+
+			<div class=reponse>
+				<h2> Selecteurs avancés</h2>
+				<h3> Casses tête sur les selecteurs</h3>
+				<p>
+					sur le code html suivant, comment mettre un fond rouge à "chataignes" et un fond cyan à "couverture"
+				</p>
+				<code>
+					&#x3C;body&#x3E;<br />
+					&#x3C;h1&#x3E;Pr&#xE9;paratifs pour l&#x27;hiver&#x3C;/h1&#x3E;<br />
+					&#x3C;ul&#x3E;<br />
+					&#x3C;li&#x3E;Pr&#xE9;voir :<br />
+					&#x3C;ul&#x3E;<br />
+					&#x3C;li&#x3E;du &#x3C;em&#x3E;pain&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br />
+					&#x3C;li&#x3E;du &#x3C;em&#x3E;chocolat&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br /><br />
+					&#x3C;li&#x3E;des &#x3C;em&#x3E;oranges&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br /><br />
+					&#x3C;li&#x3E;quelques &#x3C;em&#x3E;ch&#xE2;taignes&#x3C;/em&#x3E;<br />&#x3C;/li&#x3E;<br />
+					&#x3C;/ul&#x3E;<br />
+					&#x3C;/li&#x3E;<br />
+					&#x3C;li&#x3E;une bonne &#x3C;em&#x3E;couverture&#x3C;/em&#x3E;&#x3C;<br />/li&#x3E;<br />
+					&#x3C;/ul&#x3E;<br />
+					&#x3C;/body&#x3E;<br />
+				</code>
+				<p>Le code CSS correspondant : </p>
+				<code>
+					body>ul>li~li>em{ <br/>
+					background: cyan;<br/>
+				}<br/>
+				ul ul li~li~li~li>em{<br/>
+				background: red;<br/>
+			}	
+		</code>
+
+		<h3>Utilisation des selecteurs pour adapté le style au type de liens</h3>
+		<code>
+			[href^="mailto:"]{color: green;}// liens mail en vert<br />
+			[href*="#"]{color: red;}// liens interne <br />
+			[href*="http"]{color:purple;}// liens externes<br />
+		</code>
+
+	</div>
+	<div class=reponse>
+		<h2> Pseudos classes et pseudos éléments </h2>
+		<h3>Modification du style </h3>
+		<p>	
+			On peut modifier l'apparence d'une balise a son survol grace au css. Par exemple auhmentation de la police et de la couleur au survol d'une balise p  
+		</p>
+		<code>
+			p:hover { font-size:45; color:red;}
+		</code>
+		
+		<p class=demoHover>Essayez en survolant ce texte !</p>
+
+		<h3>Quelle est la différence entre <em>p:hover</em> et <em>p:  hover</em>?</h3>
+		<ul>
+			<li><b>p:hover</b>: le style pour une balise p survolée</li>
+			<li><b>p :hover</b> le style d'une balise p et d'une balise :hover</li>
+		</ul>
+
+		<h3>Les pseudos éléments </h3>
+		<p>
+			Modification du style de la balise <em>q</em> pour que les citations soient encadrées par des (") roses : 
+		</p>
+		<code>
+			q::before, q::after{ content: "\0022";	color: hotpink; }
+			q {	background: #62295AFF;}
+		</code>
+		<p>voici une citation : 
+			<q>Un trou noir; c'est troublant</q>
+		</p>	
+	</div>
+	<div class=reponse>
+
+		<h2>Règles de priorité </h2>
+		<h3>Casse tête</h3>
+		<p>
+			Le rendu du code avec le css correspondant :<a href="exercices/priorite.html" target="_blank" title="Rendu code avec priorite"> page exemple</a>
+		</p>
+		<h3>Que se passe t-il ?:</h3>
+		<p>
+			La priorité des éléments se fait pour la balise la plus spécifique d'abord puis par ordre de déclaration. 
+		</p>
+		<ul>
+			<li>pour l'affichage <q>Ma page</q> est un <em>h1</em> appartenant a <em>body</em> elle est désignée de maniere spécifique par <em>*</em> qui repere toutes les balises et donc en marron</li>
+
+			<li>pour l'affichage <q>Ceci est un parapgraphe</q> est un <em>  p id="intro" class="important"</em> Les prétendant serait donc <em>{ *, body,#intro, p, p.important, body .important} </em> le plus spécifique ici est l'usage de l'<em>id=intro</em>
+			</li>
+
+			<li>pour l'affichage <q>Assez remarquable</q> est une <em>em</em> qui n'est pas surchargée depuis <em>*</em> ce sera donc marron</li>
+
+			<li>pour l'affichage <q>Et que dire de celui ci ?</q> est un <em>p class="important"</em> spécifique aux membres de la classe important inclus dans body  </li>
+		</ul>
+	</div>	
+</main>
+<footer>
+	<a href="apropos.html" title="A propos de Antoine " target="_blank">Antoine PLANTIER</a>  --  
+	<a href="http://unice.fr/iut/contenus-riches/plaquettes-lp/lp-idse" title=" Plaquette Université" target="_blank">[LP SIGD-IOTIA]</a>  --  
+	<a href="http://unice.fr" title="Université de Nice" target="_blank">Université Nice Sophia-Antipolis </a> 
+</footer>
+</body>
+
+</html>

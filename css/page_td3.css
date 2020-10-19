@@ -1,4 +1,22 @@
+
+
+
+/****************************************************** Exercice 3 */
+
+main { /** TD3 : Setup du main */
+	background-color: blue;
+	width: 80%;
+	min-width: 500px;
+	max-width: 1000px;
+}
+
+
+
+
 /****************************************************** genreal style */
+
+
+
 
 /* base setup*/
 *{
@@ -14,6 +32,7 @@ main{
 	padding:  40px;
 	margin-bottom: 45px;
 	border-top: dotted white 2px;
+	margin: auto;
 }
 
 
@@ -37,11 +56,11 @@ footer a:hover{
 
 /* Styles of titles */
 h1 {
-	width: 500px;
-	margin: 0 auto ;
-	margin-top: 30px;
-	margin-bottom: 25px;
+	resize: none;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(80% - 40px);	
 }
 h2{
 	margin-bottom: 1em;
@@ -70,7 +89,6 @@ a:hover{
 	padding-bottom: 1em;
 	padding-left: 1em;
 	margin: 1em;
-	clear: both;
 }
 /*Paragraphe dans le bloc reponse tabulé, indenté sur la premiere ligne*/
 .reponse p{
@@ -92,29 +110,7 @@ p ~ ul, li{
 
 }
 
-/*Photo du chien */
-#chien{
-	width:500px;
-	height:400px;
-	position: static;
-	display: block;
 
-}
-/*div pour une image et sa légende en p */
-.legendPict {
-	float: right;
-	display: block;
-	position: static;
-	border: solid red 1px;
-}
-/*disparition de p */
-.legendPict p {
-	display: none;
-}
-/*apparition de la legende p au survol de chien*/
-.legendPict:hover p {
-	display: block;
-}
 
 
 b{
@@ -140,6 +136,6 @@ code {
 	font-size: 18px;
 	padding-top: 1em;
 	padding-bottom:  1em;
-	max-width: 45%;
+	
 }
 
