@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<title>Web - TP3 : Posons le cadre</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<header>
+		<div id="titre">
+			<h1>Module de Developpement WEB</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Page d'acceuil</a></li>
+					<li><a href="TravDir.html">Travaux Dirigés</a></li>
+					<li><a href="TravPrat.html">Travaux pratique</a></li>
+					<li><a href="Proj.html">Projets</a></li>
+					<li><a href="Material.html">Resources de cours</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<img src="src/iutSophia.png" alt="Logo de l'université de Nice Sophia Antipolis" title="Logo de l'université de Nice Sophia Antipolis"/>
+		</div>
+
+	</header>
+	<main>
+		<h2 > Compte rendu du TP3: Mise en Page, posons le cadre </h2>
+		<h2><a href="./exercices/td3.html" title="Reponse a la premiere question" target="_blank" style="color: red;"> Page du TD3 pour la manip </a></h2>
+
+		<h3>I. Principe de base</h3>
+		<section>
+			<h4> Exercice</h4> Différence traitement de texte/moteur de rendu html
+			<p>
+				<a href="exercices/td3.html" title="Reponse a la premiere question" target="_blank"> Reponse a la question</a>
+			</p>
+			<h4> Des boi-boites</h4>
+			<p> Il existe deux catégories de boites exceptions faites des tableaux ou listes  </p>
+			<h5> Inline </h5> 
+			<p>comportements comme des lettres, les uns à la suite des autres sur un axe horizontal </p>
+
+			<ul>
+				<li><b> de texte : </b>b, i, em, strong, sup, sub</li>
+				<li><b>Images</b> img</li>
+				<li><b> Divers </b></li>
+				<li><b>Liens</b> a</li>
+				<li><b>Balise neutre</b> span</li>
+			</ul>
+			<h5> Block </h5>
+			<p>comportements comme des paragraphes, les uns au dessus des autres sur un axe vertical et en occupant toute la largeur de la page par dééfaut (ou du bloc parent )  </p>
+			<ul>
+				<li><b>Titres :</b>	h1, h2, ..., h6</li>
+				<li><b>Balises structurant la page :</b>	main, section, header, footer, nav, aside...</li>
+				<li><b>Paragraphes :</b>	p</li>
+				<li><b>Listes :</b>	ol, ul</li>
+				<li><b>Divers :</b>	blockquote, pre...</li>
+				<li><b>Balise neutre :</b>	div </li>
+			</ul>
+		<h4> Exercice</h4> Config du main 
+		<p> On configure le css pour parametrer l'affichage du main de la page pour que : <br> 
+			- sa largeur soit de 80 % de la page <br>
+			- Sa largeur max soit de 1000px <br>
+			- sa largeur min soit de 500px <br>
+			<br>
+			Le display sur lequel a été testéé ce code est un 27 pouces, le main est donc limité a 1000px de largeur. lorsque l'on modifie la taille de la fenetre, la taille du main s'adapte dynamiquement jusqu'au seuil de 500px ou la il ne diminue pas moins ( et bloque la redimenssion de la page à ce seuil)
+		</p>
+		<code>
+main { /** TD3 : Setup du main */
+	background-color: blue;
+	width: 80%;
+	min-width: 500px;
+	max-width: 1000px;
+}
+		</code>
+			<h4> Exercice</h4> propriétés racourcies 
+			<p> Soit le code suivant : </p> 
+			<code> h1 { border: 2px red 4px yellow;}</code>
+			<p> Comment se comportera l'affichage ? <br>
+				Ne pas tout faire en même temps !!<br>
+				le code semble vouloir modifier la taille et couleur des bordures Haute et basse, mais nous ne pouvons pas mélanger ces propriétés. deplus il faut définir une propriété de style <br>
+			Ainsi pour le resultats escompté, privilégier :</p>
+			<code>
+h1{ 
+	border-width:  4px 2px  ; /* épaisseurs bordures top& */ 
+	border-color: red yellow; /* couleur bordures top& botbr>
+	border-style: dashed; /* style bordures top& bot */
+}
+
+			</code>	
+			<h4> Exercice</h4> Questions : 
+
+
+    <li><b> Quels avantages y a-t-il à utiliser une taille absolue ? Une taille relative ?</b>: 
+    	<p>La taille absolue est plus spécfifique. On peut être très précis mais le rendu sera donc très similaire en fonction du materiel/ navigateur utilisé. En revanche la page sera statique et  immuable. a la différence de la taille relative. </p>
+    </li>
+    <li><b> À quoi correspond l'unité em ? Et la nouvelle unité rem ?</b>: 
+    	<p> L'unité <em>em</em> correspond à une tabulation. En fonctions des systèmes, une tabulation peut etre composé d'un nombre d'espace différent. <b style="color: red;"> Quelle est la nouvelle unité </b></p>
+    </li>
+    <li><b> Expliquez le principe des nouvelles unités vh et vw et leur intérêt.</b>: 
+    	<p> <b style="color: red;">TOUT-DOUX</b></p></p>
+    </li>
+
+    <h4> Exercice</h4>
+    <p>Question parametrer le titre principal pourqu'il soit centré et occupe 80% de la page avec 20px de marge min a gauche et droite</p>
+    <code>
+    h2{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(80% - 40px);	
+  }</code>
+
+		</section>
+
+		<section>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="bloc">
+			<h4>Etudiant</h4>
+
+			<p><b>PLANTIER Antoine</b><br />
+				Etudiant en Licence pro Il est vachement sympa mais il est super naze en dev html <br /><a href="a_propos.html" title="en Savoir plus" target="test"> A Propos</a>
+			</p>
+			<div class="contact">
+				<ul>
+					<li>Tel : 04 93 95 51 50</li>
+					<li>Mail: antoine.plantier@etu.unice.fr</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bloc">
+			<h4>Intervenant</h4>
+
+			<p><b>BRUNEAU Jean-Michel</b><br />
+				Intervenant en développement web <br /> ceo de l'entreprise de
+				<a href="http://www.netspace.mc/" title="Netspace" target="_blank">Netspace</a>
+			</p>
+			<div class="contact">
+
+				<ul>
+					<li>Tel : 04 93 95 51 50 </li>
+					<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="bloc">
+			<h4> Université de Nice </h4>
+			<p><b>Licence Pro SIGD-IOTIA</b><br /> Promotion 2020-2021<br /><a href="http://unice.fr/faculte-des-lettres-arts-sciences-humaines/presentation" title="Université de Nice" target="_blank">Unice</a></p>
+			<div class="contact">
+				<ul>
+					<li>Tel : 04 93 95 51 50 </li>
+					<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+					<li>Adresse: 650 Route des Colles, 06560 Biot (Batiment bleu)</li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
+
+</body>
+
+</html>

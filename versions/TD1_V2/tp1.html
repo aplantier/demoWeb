@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<title>Web - TP1 : Découverte de l'html</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<header>
+		<img id="logo" src="src/iutSophia.png" alt="Logo de l'université de Nice Sophia Antipolis" title="Logo de l'université de Nice Sophia Antipolis">
+		<h1>Travaux Pratique N°1 -- Decouverte de l'html : De la Structure avant toute chose </h1>
+	</header>
+	<main>
+		<article id="tp1">
+			<h2> Réponses aux questions </h2>
+			<h3>Quelle est la différence entre une URL et une URI?</h3>
+			<section>
+
+				<ul>
+					<li> URL : <i>Uniform Resource Locator,</i></li>
+					<li> URI : <i>Uniform Resource Identifier</i></li>
+				</ul>
+				<p>
+					Ainsi, l'URL donne des informations afin d'accéder à une ressource et l'URI elle est une Adresse directe vers une ressource
+					<a href="https://www.journaldunet.fr/web-tech/developpement/1203023-quelle-est-la-difference-entre-uri-url-et-urn/" target="_blank">en lire plus </a>
+				</p>
+			</section>
+			<h3> Quels sont les formats d'image suivants :</h3>
+			<section>
+				<ul>
+					<li>
+						<b>Matriciel:</b>Les images sont codées sous formees de matrice ou chaque cellule correspondraient à un pixel (bmp par exemple)
+						<a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">wiki</a><br />
+					</li>
+
+					<li><b>Vectoriel:</b> Les images sont en quelque sorte des fonctions numériques et géométriques qui lorsqu'elles sont tracées forment les images <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">wiki</a></li>
+
+					<li><b>Avec perte / sans perte:</b> méthode de traitement d'image permetant de réduire leurs taille numérique en dépréciant la qualité ( couleurs, contours...) à contrario, sans perte veux dire que l'image est dans une résoolution au plus proche de sa qualité originale
+						<a href="https://fr.wikipedia.org/wiki/Compression_d%27image" target="_blank"> wiki</a>
+					</li>
+				</ul>
+			</section>
+
+
+			<h3>Quelle sont les différences entre les formats PNG, GIF, JPG et SVG ?</h3>
+			<section>
+
+				<h4>Par ordre du plus ancien au plus récent </h4>
+
+
+				<ul>
+					<li>
+						<a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" title="Graphics Interchange Format" target="_blank"> GIF 1987</a> <br />Un format propriétaire développé par CompuServe. Il permet un encodage d'au maximum de 256 couleurs dont la transparence. Ce format permet de stocker plusieurs images et donc des diaporamas ou des animations
+					</li>
+					<li>
+						<a href="https://fr.wikipedia.org/wiki/JPEG" title="Joint Photographic Experts Group" target="_blank">Jpg 1987</a> Joint Photographic Experts Group <br /> Une norme d'enregistrement et d'algorithmes de décodage pour une représenntation numériquue d'une image compressée. C'est donc un format qui peut être avec ou sans pertes :le procesus de compression est réverssible, il utilise une transformée <a href=# title="Discret Cosin Transform">DCT</a>
+					</li>
+					<li><a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" title="Portable Network Graphics" target="_blank">Png( 1er oct 96)</a><br /> Un format ouvert et sans pertes et normalisé. Il permet l'encodage d'image au format matriciel de 1 à 48 bits donc de 2 à Plus d'un trilliards de couleurs deplus, Il gère la transparence
+					</li>
+					<li><a href="https://fr.wikipedia.org/wiki/JPEG" title="Scalable Vector Graphics" target="_blank">SVG 1999 </a> Format propriétaire dévelopé par un groupe de sociétés au sein du W3C ( Adone, Microsoft) C'est un format vectoriel( sans perte) dont le but est de permettre une grande précision. Le format inclut un fichier xml décrivant sous forme d'arbre les coordonnées, dimensions et structures des objets vectoriels.
+					</li>
+				</ul>
+				<figure>
+					<img src="src/TableauComparatifFormatImage.jpg" alt="Tableau comparatif des formats" title=" Tableau comparatif des formats d'image ">
+					<a href="https://blogdumoderateur.com/" target="_blank">source</a>
+				</figure>s
+
+
+
+				<h4> Quels sont les usages conseillés pour chaques format : </h4>
+
+				<ul>
+					<li><b> PNG </b> Enregistrement d'image syntéthiques (icônes, image représentant du texte ou des images avec des dégradés). Eventuelement des photos mais en fonction de leurs qualité, la taille du fichier peut être importante
+					</li>
+					<li><b> GIF</b> Largement utilisé pour sa propriété d'animation de son contenu il était à l'origine destiné pour les images synthétiques ( logos) mais le fait qu'il soit propriétaire le déssert en faveur du fromat PNG
+					</li>
+					<li><b> JPG</b> Affichage de photos, ilustrations. Son format compressé permet un gain de place mémoire </li>
+					<li><b> SVG</b> Affichage de ressources video de grande fidélite et de précision ( Cartes Géograpgiques, topologiques, photos HD ) Format lourd mais offrant la possibilité d'être ou non compressé </li>
+				</ul>
+
+
+
+
+
+
+				<h4> Les points forts des nouveaux formats ( JPEG2000, WebP, APNG, JPEG-XR, BPG, FLIF) </h4>
+				<p>De plus en plus de nouveaux formats numériques font leurs apparitions, ils répondent aux nouveaux besoins des technologies web et technologiques. Ils ont des avantages certains: meilleurs raport qualité/compression, innovations techniques, meilleures expèriences utilisateurs.</p>
+				<p>Mais ils apportent également des inconvénients du fait de leur nouveauté et nombre ! Des technologies nouvelles à comprendre et intégrer, des éventuelles problématiques de compatibilités, le souci des mises à niveau technique des serveurs et des développeurs.
+				</p>
+
+			</section>
+			<h3>Affichage de la photo </h3>
+			<section>
+				<img src="src/chiotSKY.jpg" alt="un chien songeurn dans la peau d'un skywalker" title="Chiot Skywalker">
+			</section>
+
+			<h3>Utilisation de l'attribut <em>target</em> </h3>
+			<section>
+
+
+				<h4>Vaut il mieux privilégier <em> '_blank'</em> où <em> '_self'</em> ?</h4>
+
+				Tout dépend de du contexte de la navigation du site escomptée :
+
+				<ul>
+					<li>
+						Dans le cas ou la navigation entre pages du site est prise en compte l'utilisation de <em>_self</em> est à privilégier. Cela évite de surchager les onglets du navigateur de l'utilisateur et le chargement en mémoire des configurations des pages.
+					</li>
+					<li>
+
+						Dans le cas de liens vers des ressources externes du site, de contenus annexes ou de pages de dialogue, l'utilisation de <em>_blank</em> rend plus organisée la navigation sur le site.
+
+					</li>
+				</ul>
+
+				<h4>Y a t'il des exceptions? Lesquelles pourquoi</h4>
+
+				Il est également possible de nomer l'attribut '<em>target</em>' de sorte que si l'on suit le lien, un nouvel onglet unique est ouvert et qu'il soit employé comme destination pour tous les liens partageant cet attribut. <br />Cela permet de palier à la proffusions d'onglets en cas de d'accès multiple au même lien où de dédier un onglet comme destination unique de certains types de liens.
+
+
+			</section>
+		</article>
+
+	</main>
+
+	<footer >
+			<div class="bloc">
+				<h4>Etudiant</h4>
+
+				<p><b>PLANTIER Antoine</b><br />
+					Etudiant en Licence pro Il est vachement sympa mais il est super naze en dev html <br /><a href="a_propos.html" title="en Savoir plus" target="test"> A Propos</a>
+				</p>
+				<div class="contact">
+					<ul>
+						<li>Tel : 04 93 95 51 50</li>
+						<li>Mail: antoine.plantier@etu.unice.fr</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bloc">
+				<h4>Intervenant</h4>
+
+				<p><b>BRUNEAU Jean-Michel</b><br/>
+					Intervenant en développement web <br/> ceo de l'entreprise de
+					<a href="http://www.netspace.mc/" title="Netspace" target="_blank">Netspace</a>
+				</p>
+				<div class="contact">
+
+					<ul>
+						<li>Tel : 04 93 95 51 50 </li>
+						<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="bloc">
+				<h4> Université de Nice </h4>
+				<p><b>Licence Pro SIGD-IOTIA</b><br /> Promotion 2020-2021<br /><a href="http://unice.fr/faculte-des-lettres-arts-sciences-humaines/presentation" title="Université de Nice" target="_blank">Unice</a></p>
+				<div class="contact">
+					<ul>
+						<li>Tel : 04 93 95 51 50 </li>
+						<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+						<li>Adresse: 650 Route des Colles, 06560 Biot (Batiment bleu)</li>
+					</ul>
+				</div>
+			</div>
+		
+	</footer>
+
+
+</body>
+
+</html>

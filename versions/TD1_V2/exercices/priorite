@@ -1,0 +1,8 @@
+  <body>red
+        <h1>Ma page</h1> maron
+        <p id="intro" class="important">Ceci est un paragraphe 
+			<em>assez remarquable</em>maron
+			.maron
+		</p>
+        <p class="important">Et que dire de celui-ci ?</p>maron
+ </body>

@@ -1,0 +1,84 @@
+/* ------------------------
+		PLANTIER ANTOINE 
+		[SIGD-IOTIA] : DEV WEB 
+		CSS pour le td3
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#menuNav {
+	margin-top: 5px;
+	border-top: 5px solid lightblue;
+	text-align: right;
+	position: static;
+}
+
+
+#menuNav ul{
+
+}
+#menuNav li {
+	display: inline-block;
+	padding: 15px;
+	margin-left: 8px;
+	
+	border: blue;
+	opacity: 50%;
+
+
+}
+
+#menuNav .menuCell{
+	display: inline-block;
+	background-color: lightblue;
+		position: relative;
+}
+
+#menuNav .menuHead{
+	display: inline-block;
+	background-color: orange;
+		position: relative;
+}
+
+#menuNav a:link {
+	text-decoration:none;
+	color: white;
+}
+
+#menuNav li:hover{
+	opacity: 100%;
+	background-color: lightgreen;	
+}
+
+#menuNav li:hover a {
+
+	color: red;
+}
+
+#menuNav li ul{
+	display: none;
+	position: relative;
+}
+#menuNav li:hover ul li{
+	display: block;
+	
+}
+#menuNav li:hover ul {
+	display: inline;
+
+
+}
+.infoBulle{ 
+	
+
+}
+
+#infoBulle:hover{
+	display: absolute;
+}
+
+
+

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<title>Web - TP2 : premiers pas en CSS</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<header>
+		<div id="titre">
+			<h1>Module de Developpement WEB</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Page d'acceuil</a></li>
+					<li><a href="TravDir.html">Travaux Dirigés</a></li>
+					<li><a href="TravPrat.html">Travaux pratique</a></li>
+					<li><a href="Proj.html">Projets</a></li>
+					<li><a href="Material.html">Resources de cours</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<img src="src/iutSophia.png" alt="Logo de l'université de Nice Sophia Antipolis" title="Logo de l'université de Nice Sophia Antipolis">
+		</div>
+
+	</header>
+	<main>
+		<h1> Compte rendu du TP2</h1>
+
+		<h3>I. Introduction </h3>
+		<section>
+			<h4> Ajout d'un fichier de style css</h4>
+			<p> On crée un fichier <em>index.css</em> dans le dossier <em>./css/</em> contenant les règles de mises en page suivantes</p>
+			<!-- Balise de citation de code -->
+			<code>
+				p { color:blue; background-color: #fcf9d9; }<br /><br />
+
+				h1 { /* On veut mettre un cadre color&eacute; au titre. */ <br />
+				border-color: rgb(40, 200, 100); /* Par d&eacute;faut, le cadre est invisible ; on le rend visible. */ <br />
+				border-style:solid; /* On centre le texte dans le cadre. */ <br />
+				text-align: center; <br />
+				}</code>
+			<p>On constate que la mise en forme prends effet dès l'attachement de la feuille de style.</p>
+			<ul>
+				<li> <b> Les paragraphes de type &#8249;p&#8250; </b> sont désormais avec un fond jaune clair encodé en hexa <em>#fcf9d9</em> et la couleur de police est bleue</li>
+				<li> <b> les Titres de type &#8249;h1&#8250;</b> sont désormais encadré en vert et le texte est centré dans le bloc</li>
+			</ul>
+		</section>
+		<section>
+			<h4> Quelques questions sur la couleur</h4>
+			<h5> À quoi correspond rgb(120, 56, 13) en hexadécimal ?</h5>
+			<p>Le format RGB est un format de codage de couleur basé sur la propriété physique de l'additivité des couleurs primaires. En composant le rouge (<b>R</b>ed), le vert (<b>G</b>reen) et le bleu (<b>B</b>lue) on peut reproduire le spectre complet de la lumière, et donc (presque) toutes les couleurs, ici rgb(120, 56, 13) donne du maron.<br />
+			<ul>
+				<li>(160)_8 = (78)_16 </li>
+				<li>(56)_8 = (38)_16 </li>
+				<li>(13)_8 = (0D)_16 </li>
+			</ul>
+			<p>En hexadecimal on change en base 16 les digits octaux du code RGB (78380D)_16 </p>
+			<h5>Combien de couleurs chacune de ces trois méthodes (rgb, hexa ou nom de couleur) vous permettent d'obtenir ?</h5>
+			<p> Etant donné que les couleurs sont encodées numériquement, il existe un nombre finis de couleurs possibles dans chaques encodage.</p>
+			<ul>
+				<li><b>RGB</b> encodé avec un triplet d'octets en base 10 {255,255,255} ainsi 256^3=16 777 216. A noter que la méthode Rgb propose également un canal pour gérer la transparence</li>
+
+				<li><b>HEXADECIMAL</b> meme fonctionnement que RGB avec les octets codés en Hexadecimal. Même nombre de couleurs encodable</li>
+				<li><b> <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s" title=" systeme x11" target="_blank">Noms de couleurs système X11</a> </b> limité(148 couleurs nommées)et peu commode. En revanche, les couleurs peuvent être assez ternees à l'impression</li>
+			</ul>
+			<p> Les système RGB/HEX sont assez semblable à l'usage mais en pratique ils ont tout les deux des avantages(et des inconvénients ).<br /><br />
+				<b>RGB</b> est plus intuitif pour peu qu'on soit à l'aise avec la colorimétrie et sans avoir la contrainte de convertir de base 10 a 16. On quantifie les couleurs proportioneellement entre 0 et 255 sur les différents spectre.<br /><br />
+
+				<b>HEX</b> présente une simplicité d'encodage et de manipulation de donnée informatiquement du fait de son format Hexadecimal plus généralement utilisé en informatique. <br /><br />
+				<b> le systeme X11</b> est plus simple pour le néophite qui peut choisir les couleurs frace à un étalon et les référencer en utilisant un nom plutot qu'un code. De plus ce sont des couleurs normalisées utilises dans les système informatique utilisant le moteur graphique X11. Ces couleurs se distinguent par leurs qualité.
+			</p>
+		</section>
+		<h3>II. CSS: "Feuilles de styles en Cascade" </h3>
+		<section>
+
+			<h4>Le <b>DOM</b>"Document Object Model" </h4>
+			<p> La structure d'une page html peut être vue comme une organisation en arbre dont la racine est le noeud <i>html></i> d'où naitra l'arborescence de la page. L'arbre est considéré comme un objet que l'on nomme <b>DOM</b> qui sera l'interface de la page HTML mais est aussi utilisé dans d'autres formats ( xml, svg ... ) qui organisent l'information de manière structurée.</p>
+			<p> Le <b>DOM</b> est donc un ensemble de noeuds qui peuvent être de deux types : </p>
+			<ul>
+				<li><b> Les noeuds éléments</b>: qui sont associés aux balise, ils peuvent être attachés à des fonctions de gestion d'évènements </li>
+				<li><b>Les noeuds de type texte</b>en bout de "branche" (on parle de feuilles) qui contiennent l'information, esentiellement du texte </li>
+			</ul>
+			<p> En réalité, il existe d'autres types de noeuds : les commentaires , les espaces, les documents ... ils seront abordés par la suite </p>
+		</section>
+
+
+		<section>
+			<h4>La Notion d'héritage</h4>
+			<p> <b>Le CSS</b> attache des règles de styles à des balises. Ces règles s'appliquent à ces balises mais également à toutes celles qui en découlent (en héritent) jusqu'à la fin de la branche. Ainsi, si une nouvelle règle est définie dans un noeuds fils, celles ci s'applique à tous les noeuds enfants de celui-ci quite à redéfinir des règles établies jusqu'à lors.</p>
+			<p>En théorie, la règle la plus sécifique l'emporte sur la plus générale mais dans les faits, d'autres critères entrent en jeux pour déterminer quelle est celle qui sera appliquée </p>
+			<h5>Exercice </h5>
+			<p> Voici un exemple d'arbre DOM qui sera l'occasions de quelques quuestions</p>
+			<img id="imgDOM" src="src/DOM_exo.svg" alt="image Exercice DOM" title="Exemple d'arbre DOM">
+			<ol>
+				<li><b> Combien cet arbre a t-il de noeuds ?</b>
+					<p> Au tôtal, l'arbre est constitué de <b>29 noeuds</b></p>
+					<ul>
+						<li> <b>12 noeuds de type</b> texte (les feuilles ) </li>
+						<li> <b>17 noeuds</b> de type éléments</li>
+					</ul>
+				</li>
+				<li><b> Ecrire le co&nbsp;de &nbsp;HTML correspondant à ce DOM</b>
+				</li>
+			</ol>
+			<code>
+				<!--						<body>
+							
+							<header>
+							<h1>Les papous </h1>
+							</header>
+							<main>
+								<section>
+									<h2>Définition</h2>
+									<p> 
+										les 
+										<em>papous</em>
+									sont des habitants de papouasie
+									</p>
+								</section>
+								<section>
+									<h2>Classification</h2>
+									<ul>
+										<li>Les papous Papa</li>
+										<li>Les papous pas Papa</li>
+									</ul>
+								</section>
+							</main>
+							<footer>
+								Site réalisée par
+								<i>C. Lewi-Strauss</i>
+								en ppartenariat avec 
+								<i>A.Franquin</i>
+								.
+							</footer>
+						</body>
+					-->
+				&nbsp;<br />
+				&#x3C;body&#x3E;<br />
+				&nbsp;&#x3C;header&#x3E;<br />
+				&nbsp;&#x3C;h1&#x3E;Les papous &#x3C;/h1&#x3E;<br />
+				&nbsp;&#x3C;/header&#x3E;<br />
+				&nbsp;&#x3C;main&#x3E;<br />
+				&nbsp;&nbsp;&#x3C;section&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;p&#x3E; <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;les <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;em&#x3E;papous&#x3C;/em&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;sont des habitants de papouasie<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;/p&#x3E;<br />
+				&nbsp;&nbsp;&#x3C;/section&#x3E;<br />
+				&nbsp;&nbsp;&#x3C;section&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;ul&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;li&#x3E;Les papous Papa&#x3C;/li&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&#x3C;li&#x3E;Les papous pas Papa&#x3C;/li&#x3E;<br />
+				&nbsp;&nbsp;&nbsp;&#x3C;/ul<br />
+				&nbsp;&nbsp;&#x3C;/section&#x3E;<br />
+				&nbsp;&#x3C;/main&#x3E;<br />
+				&nbsp;&#x3C;footer&#x3E;<br />
+				&nbsp;&nbsp;Site r&#xE9;alis&#xE9;e par<br />
+				&nbsp;&nbsp;&#x3C;i&#x3E;C. Lewi-Strauss&#x3C;/i&#x3E;<br />
+				&nbsp;&nbsp;en ppartenariat avec <br />
+				&nbsp;&nbsp;&#x3C;i&#x3E;A.Franquin&#x3C;/i&#x3E;<br />
+				&nbsp;&nbsp;.<br />
+				&nbsp;&#x3C;/footer&#x3E;<br />
+				&#x3C;/body&#x3E;<br />
+				<br />
+			</code><!-- DOM Conecté -->
+			<br />
+		</section>
+		<h3> Les sélecteurs simples</h3>
+		<section>
+			<p>
+				Les sélectecteurs définissent les éléments sur lesquels s'applique un ensemble de règles CSS. Il y a plusieurs familles de sélecteurs
+			</p>
+
+			<h4>Les Sélecteurs de type </h4>
+			<p> Ce sélecteur permet de cibler les éléments qui correspondent au nom indiqué.<br />
+				<b>Syntaxe</b>: nomElement<br />
+				<b>Exemple</b>: <em>input</em> permettra de cibler n'importe que élément <em>&#x3C;input&#x3E;</em><br />
+				<b>Exemple</b>: <em>em {color:red;}</em> permettra de fixer la couleur en rouge du texte contenu par la balise.
+			</p>
+
+			<h4> Les classes</h4>
+			<p>
+				On peut associer à un élément HTML une ou plusieurs classses en ajoutant un attribut <em>class</em> dans la balise. Cette classse permet entre autre de lui attacher une mise en forme définie en CSS
+			</p>
+			<p>
+				Si l'on définis une <em>&#x3C;code class="python"&#x3E;</em> on peut lui attacher la mise en forme suivante <code>.python {background-color: yellow;}</code><br /> ou encore<br /> <code>code.python {background-color: yellow;}</code>
+			</p>
+			<p>
+				<b>Plusieurs classes peuvent être attachée à une même balise </b>: Comment le choix se fait il pour la mise en forme? Ce sera <b>la dernière mentionnée dans le fichier <b>CSS</b>!</b><br />
+				Une balise <em>&#x3c;i classs="new pin"&#x3E;</em> est associée à 2 classe(<em>new</em> et <em>pin</em>): l'ordre d'atribution des classes n'a pas d'importance, c'est leurs ordre de définitions dans le fichier <b>CSS</b> qui déterminera l'application finale en cas d'égalité.
+			</p>
+
+			<h4>Les identifiants </h4>
+			<p>
+				Ce sélecteur permet de cibler un élément en fonction de la valeur de son attribut <em>id</em>. Dans un document il ne peut y avoir <b>qu'un seul</b> élément pour un identifiant donné et les noms d'identifiants <b> sont sensibles à la case !</b><br>
+				<b>Syntaxe</b>: dans la balise <em>&#x3c;div id="intro"&#x3E;</em> l'id sera définis dans le <b>css</b> tel que <br /><code>#intro{color=red;}</code><br />
+			</p>
+			<h5>Que choisir entre <em>id</em> et <em>class</em>? </h5>
+
+			<p>Il faut se questionner :</p>
+			<ul>
+				<li>Le Style sera t-il propre à un seul Objet ? si oui <em>id</em> sinon <em>class</em></li>
+				<li>Ne veut on pas y accéder en utilisant un balise spécifique? Pas besoin d'identifier une balise titre avec un <em>id</em> si l'on veut appliquer les mêmes règles à tous les titres</li>
+			</ul>
+			<h4>Le sélecteur Universel</h4>
+			<p>
+				Le sélecteur <em>*</em> permet de créer des règles qui vont s'appliquer à tous les éléments de la page, sauf si une autre règle s'applique spécifiquement à m'élément.
+			</p>
+			<h4> Le sélecteur d'attribut </h4>
+			<p> Ce sélecteur permet de cibler des éléments d'un documents en fonction de la valeur d'un de ces attributs</p>
+		</section>
+		<h3>Quelques propriétés courantes </h3>
+		<section>
+			<h4> Propriété de texte </h4>
+			<p> Propriétés CSS pour paramétrer le texte </p>
+			<ul>
+				<li>color : couleur de texte</li>
+				<li>font-family: police de caractère</li>
+				<li>font-size: Taille de police </li>
+				<li>font-weight Mise en Gras </li>
+				<li>font-style: Mise en italique </li>
+				<li>text-align: Alignement horizontal</li>
+			</ul>
+			<h4> boites </h4>
+			<p> les éléments d'une page web peuvent être vus comme des boites, on parle de <i> box model</i>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Propriété</th>
+						<th>Valeurs (exemples)</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>background-color</td>
+						<td>
+							red<br> #A05F23<br> rgb(100,50,30) <br>rgba(50,30,60,.5)
+						</td>
+						<td>Couleur du fond.</td>
+					</tr>
+					<tr>
+						<td>opacity</td>
+						<td>0.4 40%</td>
+						<td>Opacité&nbsp;: 0 (transparent) ⟶ 1 (opaque).</td>
+					</tr>
+					<tr>
+						<td>background-image</td>
+						<td>url("img/fond.png")</td>
+						<td>Image de fond.</td>
+					</tr>
+					<tr>
+						<td>width</td>
+						<td>200px 50%</td>
+						<td>
+							Largeur de la boîte.<br> Voir aussi <i>min-width</i> et <i>max-width</i>.
+						</td>
+					</tr>
+					<tr>
+						<td>height</td>
+						<td>200px 50%</td>
+						<td>
+							Hauteur de la boîte.<br> Voir aussi <i>min-height</i> et <i>max-height</i>.
+						</td>
+					</tr>
+					<tr>
+						<td>border</td>
+						<td>solid red #AF2B54 2px dotted dashed...</td>
+						<td>
+							Propriétés du cadre. <br> La valeur <i>solid</i> correspond à un cadre simple (par défaut, il est invisible, ce qui correspond à la valeur <i>none</i>). <br> Voir aussi <i>border-top</i>,
+							<i>border-left</i>, <i>border-bottom</i> et <i>border-right</i>.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Listes </h4>
+		</section>
+		<h3>Sélecteurs avancés</h3>
+		<section>
+			<h4>Mise en pratique </h4>
+			<p> sur le code html suivant, comment mettre un fond rouge à "chataignes" et un fond cyan à "couverture"</p>
+
+			<code>
+				&#x3C;body&#x3E;<br />
+				&#x3C;h1&#x3E;Pr&#xE9;paratifs pour l&#x27;hiver&#x3C;/h1&#x3E;<br />
+				&#x3C;ul&#x3E;<br />
+				&#x3C;li&#x3E;Pr&#xE9;voir :<br />
+				&#x3C;ul&#x3E;<br />
+				&#x3C;li&#x3E;du &#x3C;em&#x3E;pain&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br />
+				&#x3C;li&#x3E;du &#x3C;em&#x3E;chocolat&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br /><br />
+				&#x3C;li&#x3E;des &#x3C;em&#x3E;oranges&#x3C;/em&#x3E;&#x3C;/li&#x3E;<br /><br />
+				&#x3C;li&#x3E;quelques &#x3C;em&#x3E;ch&#xE2;taignes&#x3C;/em&#x3E;<br />&#x3C;/li&#x3E;<br />
+				&#x3C;/ul&#x3E;<br />
+				&#x3C;/li&#x3E;<br />
+				&#x3C;li&#x3E;une bonne &#x3C;em&#x3E;couverture&#x3C;/em&#x3E;&#x3C;<br />/li&#x3E;<br />
+				&#x3C;/ul&#x3E;<br />
+				&#x3C;/body&#x3E;<br />
+			</code>
+
+
+			<p> <a href="exercices/selecteurs_simples.html" title="Exercie sur les selecteurs" target="_blank"><br /> Exercice selecteurs simple </a>
+				Le code CSS correspondant : </p>
+			<code>
+				body>ul>li~li>em{ <br />
+				background: cyan;<br />
+				}<br />
+				ul ul li~li~li~li>em{<br />
+				background: red;<br />
+				}<br />
+			</code>
+			<p> Exercice selecteurs par attributs
+				<a href="exercices/selecteurs_attributs.html" title="Exercie sur les selecteurs par attributs" target="_blank"> Exercice selecteurs par attributs</a><br />Le code css correspondant :
+			</p>
+			<code>
+				[href^="mailto:"]{color: green;}// liens mail en vert<br />
+				[href*="#"]{color: red;}// liens interne <br />
+				[href*="http"]{color:purple;}// liens externes<br />
+			</code>
+		</section>
+		<h3>Pseudos classes et pseudos éléments</h3>
+		<section>
+			<h4> Pseudo-classes</h4>
+		<p> <b> Sytaxe d'une pseudos classes </b> <em> :nom_pseudos_classe</em></p>
+		<p> Modification du survol des titres avec la souris
+			<code>h3:hover{color: hotpink;}</code>
+		</p>
+			<p> Différence entre <em>p:hover</em> et <em>p :hover</em>?<br/>
+			<em>p:hover</em> permet de de cibler la balise a lorsque elle est survolée, <em>p :hover</em> seemble ne pas fonctionner et ne pas être accepté pas le css 
+			
+			</p>
+			<h3>Pseudos-éléments</h3>
+			<p> Un pseudos élémentsont des fragements de texte qui ne sont pas des noeuds ( des feuilles )<br/> 
+			<b>Syntaxe</b>: <em>::nom_pseudo_element</em><br/>
+			 Exercice pseudos élément: modifier le premier et derniers caractère d'une citation 
+				Le code CSS correspondant : </p>
+			<code>q::first-letter{: pink;}<br/>q::last-letter{color: pink;}</code>
+		</section>
+				<h3>Règles de priorité</h3>
+		<section>
+			<h4>Exercice</h4>
+			<code>
+			&#x3C;body&#x3E;<br/>
+        &#x3C;h1&#x3E;Ma page&#x3C;/h1&#x3E;<br/>
+        &#x3C;p id=&#x22;intro&#x22; class=&#x22;important&#x22;&#x3E;Ceci est un paragraphe &#x3C;em&#x3E;assez remarquable&#x3C;/em&#x3E;.&#x3C;/p&#x3E;<br/>
+        &#x3C;p class=&#x22;important&#x22;&#x3E;Et que dire de celui-ci ?&#x3C;/p&#x3E;<br/>
+        &#x3C;/body&#x3E;<br/>
+				-------------------- Le CSS  -------------------------<br>
+				    * {<br>
+            color:brown;<br>
+&#x9;&#x9;font-family: fantasy;<br>
+        }<br>
+        <br>
+        body {<br>
+            color:red;<br>
+        }<br>
+        <br>
+        #intro {<br>
+            color:violet;<br>
+        }<br>
+        <br>
+        p {<br>
+            color:orange;<br>
+        }<br>
+        <br>
+        p.important {<br>
+            color:green;<br>
+        }<br>
+        <br>
+        body .important {<br>
+            color:blue;<br>
+        }<br>
+        <br>
+			</code>
+			<p> Le rendu du code avec le css correspondant :
+				<a href="exercices/priorite.html" target="_blank" title="Rendu code avec priorite"> page exemple</a> <br>
+				<b>Que se passe t-il ?:</b><br>
+				La priorité des éléments se fait pour la balise la plus spécifique d'abord puis par ordre de déclaration.<br>
+				ainsi : 
+			</p>
+				<ul>
+					<li>pour l'affichage <b>Ma page</b> est un <em>h1</em> appartenant a <em>body</em> elle est désignée de maniere spécifique par <em>*</em> qui repere toutes les balises et donc en marron</li>
+					
+					<li>pour l'affichage <b>Ceci est un parapgraphe</b> est un <em>  p id="intro" class="important"</em> Les prétendant serait donc <em>{ *, body,#intro, p, p.important, body .important} </em> le plus spécifique ici est l'usage de l'<em>id=intro</em>						
+					</li>
+					<li>pour l'affichage <b>Assez remarquable</b> est une <em>em</em> qui n'est pas surchargée depuis <em>*</em> ce sera donc marron</li>
+					<li>pour l'affichage <b>Et que dire de celui ci ?</b> est un <em>p class="important"</em> spécifique aux membres de la classe important inclus dans body  </li>
+				</ul>
+			<p>  </p>
+		</section>
+	</main>
+
+
+	<footer>
+		<div class="bloc">
+			<h4>Etudiant</h4>
+
+			<p><b>PLANTIER Antoine</b><br />
+				Etudiant en Licence pro Il est vachement sympa mais il est super naze en dev html <br /><a href="a_propos.html" title="en Savoir plus" target="test"> A Propos</a>
+			</p>
+			<div class="contact">
+				<ul>
+					<li>Tel : 04 93 95 51 50</li>
+					<li>Mail: antoine.plantier@etu.unice.fr</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bloc">
+			<h4>Intervenant</h4>
+
+			<p><b>BRUNEAU Jean-Michel</b><br />
+				Intervenant en développement web <br /> ceo de l'entreprise de
+				<a href="http://www.netspace.mc/" title="Netspace" target="_blank">Netspace</a>
+			</p>
+			<div class="contact">
+
+				<ul>
+					<li>Tel : 04 93 95 51 50 </li>
+					<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="bloc">
+			<h4> Université de Nice </h4>
+			<p><b>Licence Pro SIGD-IOTIA</b><br /> Promotion 2020-2021<br /><a href="http://unice.fr/faculte-des-lettres-arts-sciences-humaines/presentation" title="Université de Nice" target="_blank">Unice</a></p>
+			<div class="contact">
+				<ul>
+					<li>Tel : 04 93 95 51 50 </li>
+					<li>Mail: iut.dept-info.lpmi@unice.fr</li>
+					<li>Adresse: 650 Route des Colles, 06560 Biot (Batiment bleu)</li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
+
+</body>
+
+</html>

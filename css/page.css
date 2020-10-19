@@ -1,0 +1,101 @@
+*{
+	background: black;
+	color:  white ;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+
+h1 {
+	width: 500px;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+	
+}
+
+main{
+	padding:  40px;
+	margin-bottom: 45px;
+	border-top: dotted white 2px;
+
+}
+
+
+/* Footer Appearance */
+footer {
+
+	border-top: 2px solid white;
+	height: 35px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	position: fixed;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+}
+
+footer a:hover{
+	color: orange;
+}
+
+
+.reponse{
+	border-left: orange solid 4px;
+
+	padding-bottom: 1em;
+	padding-left: 1em;
+	margin-left: 1em;
+	margin: 1em;
+}
+
+h2{
+	margin-bottom: 1em;
+	background: orange;
+	color: black;
+	padding-left: 3em;
+	margin-left: -1em;
+	border-top-right-radius: 12px;
+}
+
+h3{
+	color: orange;
+	
+}
+
+.reponse p{
+	margin-left: 1em;
+	text-indent: 2em;
+	margin-top: 1em;
+}
+p ~ ul, li{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+
+}
+
+.reponse p + p{
+
+	margin-left: 1em;
+}
+
+a{
+	color: #69FFB9FF;
+}
+a:hover{
+	color: orange;
+}
+b{
+	color: #FFF28AFF;
+}
+
+em{
+	background: lightgrey;
+	font-family: monospace;
+	color: red;
+	padding: 3px;
+}

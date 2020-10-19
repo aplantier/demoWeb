@@ -1,0 +1,222 @@
+/************************************ 
+General display 
+*/
+
+
+* {
+	/*border: 2px solid black;*/
+	 box-sizing: border-box; /*exercice TD3 */
+
+}
+
+
+
+
+
+/** ** ** ** ** ** ** ** ** ** ** ** ** ** **	 [header]    */
+header {
+	background: linear-gradient(to right, #46E0FF, white 85%);
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+header #titre {
+	border-color: coral;
+	font-family: cursive;
+	text-align: center;
+	width: 100%;
+	height: 70%;
+}
+/** ** ** ** ** ** ** ** ** **	 [nav]    */
+nav {
+	font-family: fantasy;
+	height: 30%;
+	text-align: left;
+}
+nav li {
+	display: inline-block;
+	/* display blocks inline */
+	font-family: cursive;
+	/* font configuration */
+	font-size: 20px;
+	background-color: #F9E79F;
+	/* color of nav bar background */
+	border-radius: 25px;
+	/* round corner for the cels of the nav bar */
+	padding: 5px;
+	margin: 5px;
+	/* espacement entre les celules*/
+}
+nav a:link {			/* Apparence des liens dans la bare nav */	
+	text-decoration: none;
+	color: black;
+}
+nav li:hover {			/* Apparence au survol des liens inclus dans <li> dans la bare nav */	
+	background-color: yellow;
+	color: yellow;
+}
+nav li:active { /* Apparence au clic des liens inclus dans <li> dans la bare nav */	
+	color: yellow;
+}
+
+/** ** ** ** ** ** ** ** ** ** ** ** ** ** **	 [body]    */
+
+main { /** TD3 : Setup du main */
+background-color: lightblue;
+/*width: 80%;*/
+/*min-width: 500px;*/
+/*max-width: 1000px;*/
+
+}
+
+h2{
+
+
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(80% - 40px);
+
+	
+}
+
+
+
+h3 {
+
+	border-radius: 25px;
+	border: 3px solid #46E0FF;
+	display: inline-block;
+	padding: 5px;
+	margin-left:  88px;
+
+}
+
+h3:hover {
+	color: hotpink;
+}
+
+h5{ /* TD3: propriétés racourcies margin css*/
+
+
+	border-width:  4px 2px  ; /* épaisseurs bordures top& bot */
+	border-color: red yellow; /* couleur bordures top& bot */
+	border-style: dashed; /* style bordures top& bot */
+	
+}
+
+q {
+	background-color: aliceblue;
+}
+q::before, q::after{ /* bien joué le piège .... */
+	content: "\0022";
+	color: hotpink;
+}
+
+
+/** ** ** ** ** ** ** ** ** **	 [code]  apparence de la balise bloc  */
+code {
+	font-family: Consolas, "courier new";
+	color: crimson;
+	background-color: #f1f1f1;
+	font-size: 105%; /* augmentation de la taille de police */
+	border-left-style: solid;/* bordure gauche */
+	border-color:  aquamarine; 
+	border-left-width: 3px;
+	display: inline-block;
+	padding-left: 30px;
+	margin-left: 50px;
+	margin-right: 30%;
+	margin-bottom: 5px;
+	display: block;
+	white-space: pre;
+
+}
+
+
+em {
+	background-color: lightgrey;
+	font-family: monospace;
+}
+
+p {
+	color: blue;
+	background-color: #fcf9d9;
+	margin-bottom: 2px;
+	text-indent: 1.5em;
+}
+
+p + p { /* p frere d'un p tabulation a chaques nouveaux paragraphes */
+	text-indent: 1.5em;
+	margin-top: 0;
+}
+
+
+
+/** ** ** ** ** ** ** ** ** **	 [section]    */
+section h4 { /* Titre de section*/
+	display: inline-block;
+	border-bottom: 3px solid #46E0FF;
+	border-right: 3px solid #46E0FF;
+	padding: 5px;
+}
+section img {/* Images inclues dans une section */
+	max-width: 75%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+section {
+	padding-left: 30px;
+	background-color: bisque;
+	padding-bottom: 8px;
+}
+
+/** ** ** ** ** ** ** ** ** ** ** ** ** ** **	 [footer]    */
+footer {
+	width: 100%;
+	display: inline-flex;
+	background: #F7F7F7;
+}
+footer .bloc {
+	border: 3px solid grey;
+	background: #F7F7F7;
+	text-align: center;
+	display: block;
+	width: 33%;
+	border: 5px solid grey;
+}
+.bloc p {
+	background: #F7F7F7;
+}
+/* Display of the contact box */
+.contact {
+	border: 1px solid black;
+	text-align: left;
+	width: auto;
+	margin: 0;	
+	bottom: 0;
+}
+.contact ul {
+	text-align: left;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0%;
+}
+/** ** ** ** ** ** ** ** ** ** ** ** ** ** **	 [/footer]*/
+
+
+/** 
+
+page A propos 
+*/
+
+#aproposPict{
+	display: block;
+	border: 10px solid black;
+	margin: auto auto;
+	/*miss bloc shadow*/
+	border-radius: 25%;
+}

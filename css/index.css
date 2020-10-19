@@ -11,8 +11,9 @@
 /** 	Design nav bar */
 nav {
 	margin-left:auto;
-	border-top: 9px solid red;
+	border-top: 9px solid orange;
 	position: sticky;
+	margin-right: 5px;
 }
 /* Nav bar list of cells  */
 nav ul {
@@ -23,10 +24,11 @@ nav ul {
 nav ul li {
 	float: right;
 	padding: 4px;
-	border: 2px solid red;
+	border: 2px solid orange;
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
+	margin-left: 5px;
 }
 /* head a appearance */
 nav a{
@@ -37,10 +39,10 @@ nav a{
 }
 /* particular appareance of first elem of the ul */
 nav ul #menuTab{
-background: red;
+background: orange;
 }
 nav #menuTab a{
-	background: red;
+	background: orange;
 	color:black;
 }
 
@@ -75,18 +77,36 @@ nav #menuTab:hover a{
 	color:black;
 }
 nav ul #menuTab:hover ul li:hover a {
-	background: #FFD4A2FF
+	background: #FFD4A2FF;
 }
 
 
 
 
-
+/*appearance of h1*/
 h1 {
-	display: block;
-	text-align: center;
+width: 500px;
+margin: 0 auto ;
+margin-top: 30px;
+margin-bottom: 25px;
+text-align: center;
 	
 }
+
+h2{
+	margin-bottom: 1em;
+	background: orange;
+	color: black;
+	padding-left: 3em;
+	margin-left: -1em;
+	border-top-right-radius: 12px;
+}
+
+h3{
+	color: orange;
+	
+}
+
 /* Appareance of rolling ul */
 .sous{
 display: none; /* no display by default*/
@@ -100,4 +120,45 @@ nav > ul li:hover .sous{
 .sous li{
 	float:none; /* happend in place */
 	text-align: left;
+}
+
+
+/* crop of boddy bottom for the footer */
+main{
+	padding:  40px;
+	margin-bottom: 45px;
+	border-top: dotted white 2px;
+
+}
+
+
+/* Footer Appearance */
+footer {
+
+	border-top: 2px solid orange;
+	height: 35px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	position: fixed;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+}
+
+footer a:hover{
+	color: orange;
+}
+
+.blocInfo{
+	border-left: orange solid 4px;
+
+	padding-bottom: 1em;
+	padding-left: 1em;
+	margin-left: 1em;
+	margin: 1em;
+}
+ h2 a{
+	background: orange;
+	color: black;
 }
