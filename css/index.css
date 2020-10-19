@@ -18,36 +18,24 @@ nav {
 nav ul {
 	list-style: none;/* no defaul list style */
 }
-/* Nav bar cells */
+/* Appareance of head cells  */
+/* head li appearance */
 nav ul li {
 	float: right;
-	padding: 10px;
-	border: 1px solid red;
+	padding: 4px;
+	border: 2px solid red;
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
 }
+/* head a appearance */
 nav a{
 	text-decoration: none;
 	color: orange;
 	display: block;
-	padding: 10px 5px;
-
+	padding: 10px 10px;
 }
-nav ul li ul li {
-	background: orange;
-}
-nav ul li:hover {
-background: orange;
-}
-nav ul li:hover a{
-	color: black;
-	background: orange;
-}
-
-nav ul li ul li:hover {
-	background: green;
-}
+/* particular appareance of first elem of the ul */
 nav ul #menuTab{
 background: red;
 }
@@ -55,29 +43,61 @@ nav #menuTab a{
 	background: red;
 	color:black;
 }
-nav #menuTab:hover{
+
+/* Appareance of head cells when hover */
+/* Head cells when hover changing apearance */
+nav ul li:hover {
 background: orange;
+}
+nav ul li:hover a{
+	color: black;
+	background: orange;
+}
+/* Appearance of happening rolling ul */
+nav ul li:hover ul li {
+	background: orange;
+	margin-bottom: 5px;
+
+}
+/*Hover on the rolling menu items */
+nav ul li:hover ul li:hover a {
+	background: #FFD4A2FF
+}
+nav ul li:hover ul li:hover{
+	background: #FFD4A2FF
+}
+/*Hover of the rolling menu for the menu sell */
+nav #menuTab:hover{
+	background: orange;
 }
 nav #menuTab:hover a{
 	background: orange;
 	color:black;
 }
+nav ul #menuTab:hover ul li:hover a {
+	background: #FFD4A2FF
+}
+
+
+
+
 
 h1 {
+	display: block;
 	text-align: center;
 	
 }
-
+/* Appareance of rolling ul */
 .sous{
-display: none;
-box-shadow: 0px 1px 2px #ccc;
-background-color: white;
+display: none; /* no display by default*/
+background-color: orange;
 }
+/* DIsplay il block for the rolling menu */
 nav > ul li:hover .sous{
 	display: block;
 }
 
 .sous li{
-	float: none; 
+	float:none; /* happend in place */
 	text-align: left;
 }
