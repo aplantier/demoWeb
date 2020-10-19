@@ -1,0 +1,83 @@
+/* index.css */
+*{
+	background: black;
+	color:  white ;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+
+/** 	Design nav bar */
+nav {
+	margin-left:auto;
+	border-top: 9px solid red;
+	position: sticky;
+}
+/* Nav bar list of cells  */
+nav ul {
+	list-style: none;/* no defaul list style */
+}
+/* Nav bar cells */
+nav ul li {
+	float: right;
+	padding: 10px;
+	border: 1px solid red;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 5px;
+	text-align: center;
+}
+nav a{
+	text-decoration: none;
+	color: orange;
+	display: block;
+	padding: 10px 5px;
+
+}
+nav ul li ul li {
+	background: orange;
+}
+nav ul li:hover {
+background: orange;
+}
+nav ul li:hover a{
+	color: black;
+	background: orange;
+}
+
+nav ul li ul li:hover {
+	background: green;
+}
+nav ul #menuTab{
+background: red;
+}
+nav #menuTab a{
+	background: red;
+	color:black;
+}
+nav #menuTab:hover{
+background: orange;
+}
+nav #menuTab:hover a{
+	background: orange;
+	color:black;
+}
+
+h1 {
+	text-align: center;
+	
+}
+
+.sous{
+display: none;
+box-shadow: 0px 1px 2px #ccc;
+background-color: white;
+}
+nav > ul li:hover .sous{
+	display: block;
+}
+
+.sous li{
+	float: none; 
+	text-align: left;
+}
