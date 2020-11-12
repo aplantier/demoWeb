@@ -14,21 +14,28 @@ nav {
 	border-top: 9px solid orange;
 	position: sticky;
 	margin-right: 5px;
+	text-align:left;
 }
 /* Nav bar list of cells  */
 nav ul {
 	list-style: none;/* no defaul list style */
+	display: inline-block;
+
 }
 /* Appareance of head cells  */
 /* head li appearance */
 nav ul li {
-	float: right;
-	padding: 4px;
+	display: inline-block;
+	position: relative;
+	height: 3em;
+	padding-left:  4px;
 	border: 2px solid orange;
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
 	margin-left: 5px;
+
+
 }
 /* head a appearance */
 nav a{
@@ -38,10 +45,10 @@ nav a{
 	padding: 10px 10px;
 }
 /* particular appareance of first elem of the ul */
-nav ul #menuTab{
-background: orange;
+nav ul .active{
+	background: orange;
 }
-nav #menuTab a{
+nav .active a{
 	background: orange;
 	color:black;
 }
@@ -49,7 +56,7 @@ nav #menuTab a{
 /* Appareance of head cells when hover */
 /* Head cells when hover changing apearance */
 nav ul li:hover {
-background: orange;
+	background: orange;
 }
 nav ul li:hover a{
 	color: black;
@@ -59,24 +66,28 @@ nav ul li:hover a{
 nav ul li:hover ul li {
 	background: orange;
 	margin-bottom: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 
 }
+
 /*Hover on the rolling menu items */
 nav ul li:hover ul li:hover a {
-	background: #FFD4A2FF
+	background: #FFD4A2FF;
+
 }
 nav ul li:hover ul li:hover{
 	background: #FFD4A2FF
 }
 /*Hover of the rolling menu for the menu sell */
-nav #menuTab:hover{
+nav .active:hover{
 	background: orange;
 }
-nav #menuTab:hover a{
+nav .active:hover a{
 	background: orange;
 	color:black;
 }
-nav ul #menuTab:hover ul li:hover a {
+nav ul .active:hover ul li:hover a {
 	background: #FFD4A2FF;
 }
 
@@ -85,11 +96,11 @@ nav ul #menuTab:hover ul li:hover a {
 
 /*appearance of h1*/
 h1 {
-width: 500px;
-margin: 0 auto ;
-margin-top: 30px;
-margin-bottom: 25px;
-text-align: center;
+	width: 500px;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	text-align: center;
 	
 }
 
@@ -108,30 +119,41 @@ h3{
 }
 
 /* Appareance of rolling ul */
-.sous{
-display: none; /* no display by default*/
-background-color: orange;
+ul.sous{
+	display: none; /* no display by default*/
+	background-color: orange;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+
 }
 /* DIsplay il block for the rolling menu */
-nav > ul li:hover .sous{
+nav > ul li:hover ul.sous{
 	display: block;
+	position: absolute;
+	text-align: left;
+	top:3em;
+	left: 0em;
 }
 
-.sous li{
-	float:none; /* happend in place */
-	text-align: left;
+ul.sous li{
+	white-space: nowrap;
+	
+
 }
 
 
 /* crop of boddy bottom for the footer */
 main{
+	padding-top: 152px;
 	padding:  40px;
 	margin-bottom: 45px;
 	border-top: dotted white 2px;
 
 
 }
-
+a{
+	color: #69FFB9FF;
+}
 
 /* Footer Appearance */
 footer {
@@ -175,41 +197,64 @@ footer a:hover{
 
 	margin-left: 1em;
 }
- h2 a{
+h2 a{
 	background: orange;
 	color: black;
 }
- h2 a:hover{
- 	color: white;
- }
+h2 a:hover{
+	color: white;
+}
 
- .profil{
- display: inline-block;
- min-width: 45%;
- max-width: 45%;
- float: left;
- text-align: left;
- }
+.profil{
+	display: inline-block;
+	min-width: 45%;
+	max-width: 45%;
+	float: left;
+	text-align: left;
+}
 
 
- #profilP{
- 	float: right;
+#profilP{
+	float: right;
 
- }
+}
 .infoBule{
-display: none;
-float: right;
-position: sticky;
+	display: none;
+	float: right;
+	position: sticky;
 
 
 }
 
- .profil:hover .infoBule{
- 	display: block;
-
- 	
- }
+.profil:hover .infoBule{
+	display: block;
+}
 
 
+.interface {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
 
- 
+.interface .resume{
+	text-align: center;
+	float: left;
+	display: block;
+
+	width: 75%;
+	padding-left: 20px;
+	border-left:  solid orange 4px;
+
+}
+
+.interface  .avance{
+	float: right;
+	width: 20%;
+	padding-left: 20px;
+	border-left:  solid orange 4px;
+}
+.demoHover:hover{
+	size: 45px;
+	color:red;
+}

@@ -1,0 +1,28 @@
+
+/**
+ *   Attribuer une couleur différente aux liens selon qu'il sagisse 
+ *   	d'une adresse mail ==  VERT 
+ *   	d'un lien vers une page web interne == RED
+ *   	d'un lien vers une page web externe == PURPLE
+ */
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+[href^="mailto:"]{
+	color: green;
+	font-style: oblique;
+}
+ [href*="#"]{
+	color: red;
+}
+ [href*="http"]{
+	color:purple;
+}
+
+a {color:black; text-decoration: none;;}    
+a:visited {color:black;}  
+a:hover {color:black;}  
+a:active {color:black;}

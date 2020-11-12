@@ -1,0 +1,95 @@
+<!-- 
+	PLANTIER Antoine 
+	DEV WEB 
+	TP1
+-->
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<title>TP3 : Posons le cadre</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/page_td3.css">		
+</head>
+<body>
+	<header>
+		<h1>__________TP3 : Posons le cadre__________</h1>
+	</header>
+	<main>
+		<p>Pour cet exercice, le css de cette page est modifié cf <em>../css/page_td3.css</em> </p>	
+		<div class="reponse">
+			<h2>Différence entre un traitement de texte et un moteur de rendu HTML </h2>
+			<p><b>Question</b><br>Il y a cependant une différence notable, dès l'origine, entre un traitement de texte classique et un moteur de rendu HTML : c'est la notion de page. Quelle est la différence ? Quelles en sont les conséquences ?</p>
+			<p> <b>Reponse</b><br> 
+				- Un traitement de texte permet d'éditer du texte, de parametrer son affichage et sa mise en page/mise en forme en place. Le contenu est un enchainement de pages contenant la totalité du texte édité.<br>
+				- En html c'est l'inverse : une page est instanciée et il contient l'ensemble de son contenu
+			</p>
+			<p>
+				Ainsi un traitement de texte se soucie plus du contenu( le texte,la mise en forme, en page) que de la forme (répartition du contenu sur les pages ) tandis que en html le cadre est construit d'abord puis le contenu y est attaché
+			</p>
+		</div>
+		<div class="reponse">
+			<h2>Mise en page </h2>
+			
+			<p>Modification de la page pour que le main fasse 80% de la largeur de la page, mais avec un minimum de 500px de large et un maximum de 1000px. Par souci de visibilité, on l'a également centré </p>
+		</div>
+		<div class="reponse">
+			<h2>Propriétée des cadres: Comment se comportera l'affichage suivant?</h2>
+			<code> h1 { border: 2px red 4px yellow;}</code>
+			<p>  <br>
+				Ne pas tout faire en même temps !!<br>
+				le code semble vouloir modifier la taille et couleur des bordures Haute et basse, mais nous ne pouvons pas mélanger ces propriétés. deplus il faut définir une propriété de style <br>
+			Ainsi pour le resultats escompté, privilégier :</p>
+			<code>
+				h1{ <br/>
+				border-width:  4px 2px  ; /* épaisseurs bordures top& */ <br/>
+				border-color: red yellow; /* couleur bordures top& */<br/>
+				border-style: dashed; /* style bordures top& bot */ <br/>
+			} <br/>
+		</code>
+	</div>
+	<div class="reponse">
+		<h2>Unités</h2>
+		<h3>Quels avantages y a-t-il à utiliser une taille absolue ? Une taille relative ?</h3>
+		<p>La taille absolue est plus spécfifique. On peut être très précis mais le rendu sera donc très similaire en fonction du materiel/ navigateur utilisé. En revanche la page sera statique et  immuable. a la différence de la taille relative. </p>
+		<h3>À quoi correspond l'unité em ? Et la nouvelle unité rem ? </h3>
+		<ul>
+			<li><b>em :</b> Correspond à la taille de police dans lequel <em>em</em>. autrement dit, la taille d'un caractère affiché dans l'éléments</li>
+			<li><b>rem :</b>Correspond à la taille de police de l'élément racine ( usuelement <em>< html ></em> ) a la différence de em hérite de la taille de son parent</li>
+		</ul>
+		<h3>Expliquez le principe des nouvelles unités vh et vw et leur intérêt. </h3>
+		<p>Les nouvelles unitées <em>vw</em>  et <em>vh</em> permettent d'adapter la taille des pages aux interfaces des utilisateurs.</p>
+		<ul>
+			<li><b>vh</b>: 1/100eme de la hauteur (height)de l'interface utilisateur</li>
+			<li><b>vw</b>: 1/100eme de la largeur (width) de l'interface utilisateur</li>
+		</div>
+		<div class="reponse">
+			<h2>Centrage d'une boite</h2>
+			<p>
+				Modifiez votre titre principal pour qu'il soit centré sur la page et prenne 80% de la largeur de la page, mais avec une marge minimale de gauche et de droite de 20 pixels
+			</p>
+			<code>
+				h1{<br>
+				text-align: center;<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				width: calc(80% - 40px);	<br>
+			}</code>
+		</div>
+		<div class="reponse">
+			<h2> Menu Horizontal</h2>
+			<p> CF index </p>
+			<h3>Info bulle</h3>
+			<p>Voir photo hover dans la page <a href="../apropos.html" title="A propos ANtoine">A propos</a> ou  les onglets du menu horizontal</p>
+		</div>
+		<div class="reponse">
+			<h2> Elements flotants </h2>
+			<h3>Faire floter le chien du <a href="tp1.html" title="tp1" target="_blank">TP3</a> </h3>
+	</main>
+	<footer>
+		<a href="apropos.html" title="A propos de Antoine " target="_blank">Antoine PLANTIER</a>  --  
+		<a href="http://unice.fr/iut/contenus-riches/plaquettes-lp/lp-idse" title=" Plaquette Université" target="_blank">[LP SIGD-IOTIA]</a>  --  
+		<a href="http://unice.fr" title="Université de Nice" target="_blank">Université Nice Sophia-Antipolis </a> 
+	</footer>
+</body>
+
+</html>

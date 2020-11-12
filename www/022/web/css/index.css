@@ -1,0 +1,237 @@
+/* index.css */
+*{
+	background: black;
+	color:  white ;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+
+/** 	Design nav bar */
+nav {
+	margin-left:auto;
+	border-top: 9px solid orange;
+	position: sticky;
+	margin-right: 5px;
+}
+/* Nav bar list of cells  */
+nav ul {
+	list-style: none;/* no defaul list style */
+}
+/* Appareance of head cells  */
+/* head li appearance */
+nav ul li {
+	display: block;
+	float: right;
+	padding: 4px;
+	border: 2px solid orange;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 5px;
+	text-align: center;
+	margin-left: 5px;
+}
+/* head a appearance */
+nav a{
+	text-decoration: none;
+	color: orange;
+	display: block;
+	padding: 10px 10px;
+}
+/* particular appareance of first elem of the ul */
+nav ul #menuTab{
+	background: orange;
+}
+nav #menuTab a{
+	background: orange;
+	color:black;
+}
+
+/* Appareance of head cells when hover */
+/* Head cells when hover changing apearance */
+nav ul li:hover {
+	background: orange;
+}
+nav ul li:hover a{
+	color: black;
+	background: orange;
+}
+/* Appearance of happening rolling ul */
+nav ul li:hover ul li {
+	background: orange;
+	margin-bottom: 5px;
+
+}
+/*Hover on the rolling menu items */
+nav ul li:hover ul li:hover a {
+	background: #FFD4A2FF
+}
+nav ul li:hover ul li:hover{
+	background: #FFD4A2FF
+}
+/*Hover of the rolling menu for the menu sell */
+nav #menuTab:hover{
+	background: orange;
+}
+nav #menuTab:hover a{
+	background: orange;
+	color:black;
+}
+nav ul #menuTab:hover ul li:hover a {
+	background: #FFD4A2FF;
+}
+
+
+
+
+/*appearance of h1*/
+h1 {
+	width: 500px;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+	
+}
+
+h2{
+	margin-bottom: 1em;
+	background: orange;
+	color: black;
+	padding-left: 3em;
+	margin-left: -1em;
+	border-top-right-radius: 12px;
+}
+
+h3{
+	color: orange;
+	
+}
+
+/* Appareance of rolling ul */
+.sous{
+	display: none; /* no display by default*/
+	background-color: orange;
+}
+/* DIsplay il block for the rolling menu */
+nav > ul li:hover .sous{
+	display: block;
+}
+
+.sous li{
+	float:none; /* happend in place */
+	text-align: left;
+}
+
+
+/* crop of boddy bottom for the footer */
+main{
+	padding:  40px;
+	margin-bottom: 45px;
+	border-top: dotted white 2px;
+
+
+}
+a{
+	color: #69FFB9FF;
+}
+
+/* Footer Appearance */
+footer {
+
+	border-top: 2px solid orange;
+	height: 35px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	position: fixed;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+}
+
+footer a:hover{
+	color: orange;
+}
+
+.blocInfo{
+	border-left: orange solid 4px;
+
+	padding-bottom: 1em;
+	padding-left: 1em;
+	margin-left: 1em;
+	margin: 1em;
+}
+.blocInfo p{
+	margin-left: 1em;
+	text-indent: 1em;
+	margin-top: 1em;
+}
+.blocInfo p ~ ul{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+
+}
+
+.blocInfo p + p{
+
+	margin-left: 1em;
+}
+h2 a{
+	background: orange;
+	color: black;
+}
+h2 a:hover{
+	color: white;
+}
+
+.profil{
+	display: inline-block;
+	min-width: 45%;
+	max-width: 45%;
+	float: left;
+	text-align: left;
+}
+
+
+#profilP{
+	float: right;
+
+}
+.infoBule{
+	display: none;
+	float: right;
+	position: sticky;
+
+
+}
+
+.profil:hover .infoBule{
+	display: block;
+}
+
+
+.interface {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+.interface .resume{
+	text-align: center;
+	float: left;
+	display: block;
+
+	width: 75%;
+	padding-left: 20px;
+	border-left:  solid orange 4px;
+
+}
+
+.interface  .avance{
+	float: right;
+	width: 20%;
+	padding-left: 20px;
+	border-left:  solid orange 4px;
+}

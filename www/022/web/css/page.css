@@ -1,0 +1,151 @@
+/****************************************************** genreal style */
+
+/* base setup*/
+*{
+	background: black;
+	color:  white ;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+/* Main modificated for tp3 */
+main{
+	padding:  40px;
+	margin-bottom: 45px;
+	border-top: dotted white 2px;
+}
+
+
+/* Footer Appearance */
+footer {
+
+	border-top: 2px solid white;
+	height: 35px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	position: fixed;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+}
+
+footer a:hover{
+	color: orange;
+}
+
+/* Styles of titles */
+h1 {
+	width: 500px;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+h2{
+	margin-bottom: 1em;
+	background: orange;
+	color: black;
+	padding-left: 3em;
+	margin-left: -1em;
+	border-top-right-radius: 12px;
+}
+
+h3{
+	color: orange;
+	margin-bottom: 1em;
+}
+
+a{
+	color: #69FFB9FF;
+}
+a:hover{
+	color: orange;
+}
+
+/* Answer bloc (tabulayed, lmargin)*/
+.reponse{
+	border-left: orange solid 4px;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	margin: 1em;
+	clear: both;
+	height: auto;
+}
+/*Paragraphe dans le bloc reponse tabulé, indenté sur la premiere ligne*/
+.reponse p{
+	margin-left: 1em;
+	text-indent: 2em;
+	margin-top: 1em;
+}
+/* Tabulation one paragraph to another */
+.reponse p + p{
+
+	margin-left: 1em;
+}
+
+/* tabulation des listes dans les paragraphes */
+p ~ ul, li{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+
+}
+
+/*Photo du chien */
+#chien{
+	width:500px;
+	height:400px;
+	position: relative;
+
+
+}
+/*div pour une image et sa légende en p */
+.legendPict {
+	float: right;
+	display: block;
+	position: static;
+	border: solid red 1px;
+
+}
+/*disparition de p */
+.legendPict p {
+	display: none;
+}
+/*apparition de la legende p au survol de chien*/
+.legendPict:hover p {
+	display: block;
+}
+
+
+b{
+	color: #FFF28AFF;
+}
+
+em{
+	background: lightgrey;
+	font-family: monospace;
+	color: black;
+	padding: 3px;
+}
+
+code {
+	border-left: 8px solid blue;
+	display: block;
+	background: lightgrey;
+	font-family: monospace;
+	color: red;
+	padding-left: 3em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 18px;
+	padding-top: 1em;
+	padding-bottom:  1em;
+	max-width: 45%;
+}
+.demoHover:hover{
+	font-size:  45px;
+	color:red;
+}
+

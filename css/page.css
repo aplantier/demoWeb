@@ -71,6 +71,7 @@ a:hover{
 	padding-left: 1em;
 	margin: 1em;
 	clear: both;
+	height: auto;
 }
 /*Paragraphe dans le bloc reponse tabulé, indenté sur la premiere ligne*/
 .reponse p{
@@ -96,16 +97,17 @@ p ~ ul, li{
 #chien{
 	width:500px;
 	height:400px;
-	position: static;
-	display: block;
+	position: relative;
+
 
 }
 /*div pour une image et sa légende en p */
 .legendPict {
 	float: right;
 	display: block;
-	position: static;
+	position: static ;
 	border: solid red 1px;
+
 }
 /*disparition de p */
 .legendPict p {
@@ -141,5 +143,9 @@ code {
 	padding-top: 1em;
 	padding-bottom:  1em;
 	max-width: 45%;
+}
+.demoHover:hover{
+	font-size:  45px;
+	color:red;
 }
 

@@ -1,0 +1,35 @@
+
+/** Exercice : 
+		chataigne fond rouge
+		couverture fond cyan
+**/
+ul ul li~li~li~li>em{
+	/** em étant un fils de (
+			li étant le frère de (
+				li étant le frère de (
+					li étant le frère de (
+						li descendant de (
+							ul descendant de (
+								ul
+							)
+						)
+					)
+				)
+			)
+		)
+	*/
+	background: red;
+}
+body>ul>li~li>em{ 
+	/** em étant un fils de (
+			li étant le frère de (
+				li qui est un fils de (
+					ul  qui est un fils de (
+						body
+					)
+				)
+			)
+		)
+	*/
+	background: cyan;
+}

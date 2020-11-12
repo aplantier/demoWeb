@@ -1,0 +1,25 @@
+    * {
+            color:brown;
+		font-family: fantasy;
+        }
+        
+        body {
+            color:red;
+        }
+        
+        #intro {
+            color:violet;
+        }
+        
+        p {
+            color:orange;
+        }
+        
+        p.important {
+            color:green;
+        }
+        
+        body .important {
+            color:blue;
+        }
+        
