@@ -208,54 +208,65 @@ code {
 
 /** FORMULAIRE  */
 
+.formRound{
+	border:  solid 12px orange;
+	border-radius: 12px;
+	display: inline-block;
+	min-width: 30em;
+	margin: 0 auto;
+	text-align: center;
+}
 
+form {
+    background-color: black;
+    border-color: orange;
+    width: 70%;
+    margin: auto;
+}
 form legend {
-    color: black;
+    color: #69FFB9FF;
     font-size: 1em;
     margin-bottom: .2rem;
     padding-top: 10px;
     font-weight: bold;
 }
 
-form {
-    background-color: black;
-    padding: 10px;
-    width: 70%;
-
-}
 
 .formulaire {
-    background-color: white;
+    background-color: black;
     display: block;
-    padding: 22px;
-    border-radius: 30px;
+
 }
 
 .commentaire {
     height: 90px;
 }
+
 form sup{
-	color: black;
-	background: white;
+	color: orange;
+	background: black;
 }
 form legend{
-	background: white;
+	background: black;
 }
 form legend::first-letter {
     color: orange;
-    background: white;
+    background: black;
 }
 
 form fieldset {
-	background: white;
+	background: black;
     width: auto;
+    padding: 5px;
+    margin: 0px;
+    border-width: 0px;
 }
 
 form input {
     background-color: grey;
     color: orange;
     width: 100%;
-    border-radius: 10px;
+
     cursor: pointer;
 }
 
@@ -265,15 +276,17 @@ form input {
 }
 
 #Button {
-    padding-top: 10px;
+    padding-top: 19px;
     text-align: center;
     background: black;
     border: 0px;
 }
 
 .MyButton {
-    border-radius: 20px;
-    color: orange;
+    border-radius: 40px;
+    border:  dotted orange ;
+    padding: 8px;
+    color: #69FFB9FF;
 }
 
 

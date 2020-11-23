@@ -129,7 +129,7 @@ em{
 	color: black;
 	padding: 3px;
 }
-
+/** Setting up of the code bloc */ 
 code {
 	border-left: 8px solid blue;
 	display: block;

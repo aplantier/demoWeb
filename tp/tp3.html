@@ -86,17 +86,20 @@
 			<h3>Faire floter le chien du <a href="tp1.html" title="tp1" target="_blank">TP3</a> </h3>
 		</div>
 		<div class="reponse">
-			<h2>
-				
-			</h2>
-			
-		</div>
-	</main>
-	<footer>
-		<a href="apropos.html" title="A propos de Antoine " target="_blank">Antoine PLANTIER</a>  --  
-		<a href="http://unice.fr/iut/contenus-riches/plaquettes-lp/lp-idse" title=" Plaquette Université" target="_blank">[LP SIGD-IOTIA]</a>  --  
-		<a href="http://unice.fr" title="Université de Nice" target="_blank">Université Nice Sophia-Antipolis </a> 
-	</footer>
-</body>
+			<h2>Pourquoi DIV #1 est-il devant DIV #4, alors que son z-index est plus faible ? </h2>
+			<p> <em>DIV #1</em>  a un z-index de 5 et il est superieur dans la hierarchie du DOM a  <em>DIV #3</em> qui a une position absolue. Or la position de <em>DIV #4</em> etant relative a son parent <em>DIV #3</em> l'empilement se fait selon le z-index mais seulement pour les enfants relativement a leurs parents. 			
+			</div>
+			<div class="reponse">
+				<h2>Etancheité de boites </h2>
+				<p>A la suppression de la marge du main, les bordures sont absorbées par l'element B </p>
+			</div>
 
-</html>
+		</main>
+		<footer>
+			<a href="apropos.html" title="A propos de Antoine " target="_blank">Antoine PLANTIER</a>  --  
+			<a href="http://unice.fr/iut/contenus-riches/plaquettes-lp/lp-idse" title=" Plaquette Université" target="_blank">[LP SIGD-IOTIA]</a>  --  
+			<a href="http://unice.fr" title="Université de Nice" target="_blank">Université Nice Sophia-Antipolis </a> 
+		</footer>
+	</body>
+
+	</html>
