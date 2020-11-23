@@ -1,0 +1,286 @@
+/****************************************************** genreal style */
+
+/* base setup*/
+*{
+	background: black;
+	color:  white ;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Avenir;
+}
+/* Main modificated for tp3 */
+main{
+	padding:  40px;
+	margin-bottom: 45px;
+	border-top: dotted white 2px;
+}
+
+
+/* Footer Appearance */
+footer {
+
+	border-top: 2px solid white;
+	height: 35px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	position: fixed;
+	margin-bottom: 0px;
+	padding: 5px 5px;
+}
+
+footer a:hover{
+	color: orange;
+}
+
+/* Styles of titles */
+h1 {
+	width: 500px;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+h2{
+	margin-bottom: 1em;
+	background: orange;
+	color: black;
+	padding-left: 3em;
+	margin-left: -1em;
+	border-top-right-radius: 12px;
+}
+
+h3{
+	color: orange;
+	margin-bottom: 1em;
+}
+
+a{
+	color: #69FFB9FF;
+}
+a:hover{
+	color: orange;
+}
+
+/* Answer bloc (tabulayed, lmargin)*/
+.reponse{
+	border-left: orange solid 4px;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	margin: 1em;
+	clear: both;
+	height: auto;
+}
+/*Paragraphe dans le bloc reponse tabulé, indenté sur la premiere ligne*/
+.reponse p{
+	margin-left: 1em;
+	text-indent: 2em;
+	margin-top: 1em;
+}
+/* Tabulation one paragraph to another */
+.reponse p + p{
+
+	margin-left: 1em;
+}
+
+/* tabulation des listes dans les paragraphes */
+p ~ ul, li{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+
+}
+
+
+b{
+	color: #FFF28AFF;
+}
+
+em{
+	background: lightgrey;
+	font-family: monospace;
+	color: black;
+	padding: 3px;
+}
+
+code {
+	border-left: 8px solid blue;
+	display: block;
+	background: lightgrey;
+	font-family: monospace;
+	color: red;
+	padding-left: 3em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 18px;
+	padding-top: 1em;
+	padding-bottom:  1em;
+
+}
+
+/* *_______ Mise en page pour le tableau dans le tp4 _______ * */
+
+/**
+ * Mise en page de l'enonce 
+ */
+.reponse1 table {
+	border:1px solid;
+	caption-side: bottom;
+}
+
+.reponse1 caption {
+	font-variant: small-caps;
+	color: gray;
+}
+/**
+ * Mise en page des cellules header de la table 
+ * Fond saumon et couleur de police blanche  
+ */
+.reponse1 thead th{
+	background: #f98f82;
+	color: white;
+}
+/**
+ * La premiere cellule des header a un radius sur le coin UL
+ */
+.reponse1 thead th:first-child{
+	border-top-left-radius:  12px;
+}
+/**
+ * La derniere cellule des header a un radius sur le coin UR
+ */
+.reponse1 thead th:last-child{
+	border-top-right-radius:  12px;
+}
+/**
+ * La premiere lettre des cellules des header a un sa premiere lettre de plus grande taille et une couleur de police differente
+ */
+.reponse1 thead th::first-letter {
+	font-size: 130%;
+	color: #ffebcc;
+}
+/**
+ * Les cellules d'une table on un fond pale et une couleur de police en noir 
+ * 
+ */
+.reponse1 tbody, td {
+	background: #f8ebd7;
+		color: black;
+}
+/**
+ * La premiere des cellules de chaques lignes de la table est en gras
+ */
+.reponse1 tbody tr td:first-child{
+	font-weight: bold; 
+}
+/**
+ * La premiere lettre des premieres cellules de chaques lignes de la table a une plus grande taille de police
+ *  et une couleur de police rouge. Egalement un leger pqding mqis un qlignement a gauche 
+ */
+.reponse1 tbody tr td:first-child::first-letter{
+	font-size: 130%;
+	color: #b02121;
+	padding-left: 1em;
+}
+/**
+ * les deuxiemes colonnes modulo 5 sont en italique  
+ */
+.reponse1 tbody tr td:nth-child(3n +2){
+	font-style: italic;
+}
+/**
+ * les Troisième colonnes modulo 5 sont en alignée au centre  
+ */
+.reponse1 tbody tr td:nth-child(3n+3){
+	text-align: center;
+}
+/**
+ * Les dernières cellules du tableau sont precedees du symboles de telephone dont la taille est augmentee est la couleur changee 
+ */
+.reponse1 tbody tr td:last-child::before{
+	color: #deb885;
+	font-size: 150%;
+	content: "✆";
+}
+
+
+/** FORMULAIRE  */
+
+
+form legend {
+    color: black;
+    font-size: 1em;
+    margin-bottom: .2rem;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+form {
+    background-color: black;
+    padding: 10px;
+    width: 70%;
+
+}
+
+.formulaire {
+    background-color: white;
+    display: block;
+    padding: 22px;
+    border-radius: 30px;
+}
+
+.commentaire {
+    height: 90px;
+}
+form sup{
+	color: black;
+	background: white;
+}
+form legend{
+	background: white;
+}
+form legend::first-letter {
+    color: orange;
+    background: white;
+}
+
+form fieldset {
+	background: white;
+    width: auto;
+}
+
+form input {
+    background-color: grey;
+    color: orange;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#range {
+    width: 90% !important;
+
+}
+
+#Button {
+    padding-top: 10px;
+    text-align: center;
+    background: black;
+    border: 0px;
+}
+
+.MyButton {
+    border-radius: 20px;
+    color: orange;
+}
+
+
+/* 
+tr td::first-child::first-letter{
+	font-size: 14px;
+	color: #b02121;
+
+}
+ */

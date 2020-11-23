@@ -1,0 +1,72 @@
+---
+lang: fr
+title: 'TP4 : Complement HTML'
+---
+
+TP4 : Posons le cadre
+=====================
+
+::: {role="main"}
+::: {.reponse}
+Les tableaux
+------------
+
+Voici un tableau dont la mise en forme a ete modifie uniquement grace au
+css et sans
+
+Annuaire des membres
+
+Nom
+:::
+:::
+
+Prénom
+
+Date de naissance
+
+Téléphone
+
+Martin
+
+Louis
+
+05/12/1960
+
+0610234578
+
+Le Douec
+
+Julie
+
+18/05/1975
+
+0610247013
+
+Jolivet
+
+Leo
+
+01/03/1982
+
+0745516021
+
+Merzougui
+
+Aïssa
+
+23/02/1962
+
+0685417844
+
+Pinto
+
+Jose
+
+18/11/1976
+
+0647814102
+
+[Antoine PLANTIER](apropos.html "A propos de Antoine ") \-- [\[LP
+SIGD-IOTIA\]](http://unice.fr/iut/contenus-riches/plaquettes-lp/lp-idse " Plaquette Université")
+\-- [Université Nice
+Sophia-Antipolis](http://unice.fr "Université de Nice")
